@@ -126,3 +126,30 @@ ul {
 
 /* End Navbar */
 /* End Landing */
+/* Start Search */
+.search-nti{
+    border:none;
+    background-color: transparent;
+    height: 60px;
+    width:60px;
+}
+.search-website{
+    background-color: red;
+    padding:30px;
+}
+.search-website .search-buttons{
+    display: flex;
+    flex-flow: nowrap row;
+    gap:30px;
+    margin-bottom: 30px;
+}
+.search-website .search-buttons>button{
+    width:150px;
+    padding: 10px;
+    font-weight:bold;
+    background-color: transparent;
+    color: var(--main-color);
+    border: 1px solid black;
+
+}
+/* End Search */
