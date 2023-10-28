@@ -13,42 +13,63 @@
      <script src="js/bootstrap.bundle.js"></script>
 </head>
 <body>
+     <div class="" id="dimming"></div>
      <main>
           <!-- Start Landing -->
-          <section class="landing container-fluid p-0">
-               <ul class="nav utility-nav container d-flex justify-content-end">
-                    <li class="nav-item">
-                         <a class="nav-link" aria-current="page" href="#">NTI Mail</a>
-                    </li>
-                    <li class="nav-item">
-                         <a class="nav-link" href="#">Moodle</a>
-                    </li>
-                    <li class="nav-item">
-                         <a class="nav-link" href="#">Tamamy</a>
-                    </li>
-               </ul>
-               <nav class="main-nav navbar  navbar-expand-lg bg-body-tertiary bg-white ">
-                    <div class="container justify-content-start">
-                         <a class="navbar-brand" href="index.html">
-                              <img src="images/NTI LOGO.png" alt="National Telecommunication Institute">
-                         </a>
-                         <div class="divide d-flex flex-column justify-content-end w-100 gap-2">
-                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                   aria-expanded="false" aria-label="Toggle navigation">
-                                   <span class="navbar-toggler-icon"></span>
+          <section class="landing container-fluid p-0 position-relative overflow-hidden ">
+               <div class="all-navigation position-relative">
+                    <ul class="nav utility-nav container d-flex justify-content-end p-0">
+                         <li class="nav-item">
+                              <a class="nav-link" aria-current="page" href="#">NTI Mail</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="#">Moodle</a>
+                         </li>
+                         <li class="nav-item">
+                              <a class="nav-link" href="#">Tamamy</a>
+                         </li>
+                    </ul>
+                    <nav class="main-nav navbar navbar-expand-lg bg-body-tertiary bg-white">
+                         <div
+                              class="nav-sections container-fluid container-lg d-flex flex-row justify-content-between align-items-center w-lg-100 position-relative p-0">
+                              <a class="navbar-brand p-0 order-1 order-lg-0" href="index.html">
+                                   <img src="images/NTI LOGO.png" alt="National Telecommunication Institute">
+                              </a>
+                              <button href="#" class="search-nti align-self-center d-flex align-items-center justify-content-center p-0 order-2"
+                                   id="searchToggle"><i class="fa-solid fa-magnifying-glass icon" id="searchIcon"></i>
                               </button>
-                              <div class="collapse navbar-collapse justify-content-between pt-4 "
+                              <div class="search-website container-fluid d-flex flex-column flex-md-row justify-content-between p-0 " id="searchWebsite">
+                                   <div class="search-left col-12 col-md-8">
+                                        <div class="search-buttons d-flex justify-content-center justify-content-md-start">
+                                             <button class="active" id="websiteSearch">Website Search</button>
+                                             <button id="courseSearch">Course Search</button>
+                                        </div>
+                                        <input type="search" name="" id="searchData" class="col-12 p-2 mt-3 mb-1 rounded-0"
+                                             placeholder="Search NTI Website">
+                                   </div>
+                                   <div class="search-right col-12 col-md-3 d-none" id="searchRight">
+                                        <ul class=" d-flex flex-column justify-content-around h-100">
+                                             <li><a href="#">Training Activities</a></li>
+                                             <li><a href="#">One Month Initiative</a></li>
+                                             <li><a href="#">Evening Initiative</a></li>
+                                             <li><a href="#">Four Months Initiative</a></li>
+                                             <li><a href="#">Creativa</a></li>
+                                             <li><a href="#">Post Graduate Diploma</a></li>
+                                        </ul>
+                                   </div>
+                              </div>
+                              <div class="container collapse collapsed navbar-collapse  justify-content-between d-none d-lg-block order-0 order-lg-1"
                                    id="navbarSupportedContent">
                                    <div class="nav-content">
-                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
+                                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 ">
                                              <li class="nav-item dropdown">
                                                   <a class="nav-link dropdown-toggle" href="#" role="button"
                                                        data-bs-toggle="dropdown" aria-expanded="false">
                                                        About NTI
                                                   </a>
                                                   <ul class="dropdown-menu mt-0 rounded-0 border-0 p-0">
-                                                       <li><a class="dropdown-item" href="#">NTI in lines</a></li>
+                                                       <li><a class="dropdown-item" href="#">NTI in lines</a>
+                                                       </li>
                                                        <li><a class="dropdown-item" href="#">NTI Specific
                                                                  Departments</a></li>
                                                        <li><a class="dropdown-item" href="#">NTI Campuses</a>
@@ -66,10 +87,14 @@
                                                        Training Activities
                                                   </a>
                                                   <ul class="dropdown-menu mt-0 rounded-0 border-0 p-0">
-                                                       <li><a class="dropdown-item" href="#">Training Courses</a></li>
-                                                       <li><a class="dropdown-item" href="#">Undergraduate Summer
+                                                       <li><a class="dropdown-item" href="#">Training
+                                                                 Courses</a>
+                                                       </li>
+                                                       <li><a class="dropdown-item" href="#">Undergraduate
+                                                                 Summer
                                                                  Training</a></li>
-                                                       <li><a class="dropdown-item" href="#">Vendor Specific Training
+                                                       <li><a class="dropdown-item" href="#">Vendor Specific
+                                                                 Training
                                                                  Programs</a>
                                                        </li>
                                                   </ul>
@@ -80,13 +105,17 @@
                                                        Digital Egypt Youth
                                                   </a>
                                                   <ul class="dropdown-menu mt-0 rounded-0 border-0 p-0">
-                                                       <li><a class="dropdown-item" href="#">One Month Initiative</a>
+                                                       <li><a class="dropdown-item" href="#">One Month
+                                                                 Initiative</a>
                                                        </li>
-                                                       <li><a class="dropdown-item" href="#">Four Months Initiative</a>
+                                                       <li><a class="dropdown-item" href="#">Four Months
+                                                                 Initiative</a>
                                                        </li>
-                                                       <li><a class="dropdown-item" href="#">Evening Initiative</a>
+                                                       <li><a class="dropdown-item" href="#">Evening
+                                                                 Initiative</a>
                                                        </li>
-                                                       <li><a class="dropdown-item" href="#">Creativa (Offline)</a>
+                                                       <li><a class="dropdown-item" href="#">Creativa
+                                                                 (Offline)</a>
                                                        </li>
                                                   </ul>
                                              </li>
@@ -98,26 +127,109 @@
                                              </li>
                                         </ul>
                                    </div>
-                                   <button href="#" class="search-nti d-flex align-items-center justify-content-center p-0"><i class="fa-solid fa-magnifying-glass"></i></button>
                               </div>
-                              <div class="search-website container-fluid">
-                                   <div class="search-buttons">
-                                        <button>Website Search</button>
-                                        <button>Course Search</button>
-                                   </div>
-                                   <input type="search" name="" id="" placeholder="Search NTI Website">
-                              </div>
-                              <div class="login container d-flex flex-row align-items-center gap-4 justify-content-end p-0"
-                                   style="font-size: 14px;">
-                                   <div class="login d-flex flex-row align-items-center gap-2 ">
-                                        <i class="fa-thin fa-arrow-right-to-bracket"></i>
-                                        <a href="#">Login</a>
-                                   </div>
-                                   <a href="#">Create Account</a>
+                              <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse"
+                                   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                   aria-expanded="false" aria-label="Toggle navigation">
+                                   <i class="fa-solid fa-bars"></i>
+                              </button>
+                         </div>
+                    </nav>
+                    <div class="container-fluid container-lg bg-body-tertiary bg-white p-0">
+                         <div class="collapse container m-0  navbar-collapse justify-content-between order-lg-1 order-lg-1 d-lg-none"
+                              id="navbarSupportedContent">
+                              <div class="nav-content">
+                                   <ul class="navbar-nav me-auto mb-lg-0 gap-2">
+                                        <li class="nav-item dropdown">
+                                             <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                  data-bs-toggle="dropdown" aria-expanded="false">
+                                                  About NTI
+                                             </a>
+                                             <ul class="dropdown-menu mt-0 rounded-0 border-0 p-0 w-100">
+                                                  <li><a class="dropdown-item" href="#">NTI in lines</a>
+                                                  </li>
+                                                  <li><a class="dropdown-item" href="#">NTI Specific
+                                                            Departments</a></li>
+                                                  <li><a class="dropdown-item" href="#">NTI Campuses</a>
+                                                  </li>
+                                                  <li><a class="dropdown-item" href="#">Why NTI?</a>
+                                                  </li>
+                                                  <li><a class="dropdown-item" href="#">Research and
+                                                            Development</a>
+                                                  </li>
+                                             </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                             <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                  data-bs-toggle="dropdown" aria-expanded="false">
+                                                  Training Activities
+                                             </a>
+                                             <ul class="dropdown-menu mt-0 rounded-0 border-0 p-0 w-100">
+                                                  <li><a class="dropdown-item" href="#">Training
+                                                            Courses</a>
+                                                  </li>
+                                                  <li><a class="dropdown-item" href="#">Undergraduate
+                                                            Summer
+                                                            Training</a></li>
+                                                  <li><a class="dropdown-item" href="#">Vendor Specific
+                                                            Training
+                                                            Programs</a>
+                                                  </li>
+                                             </ul>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                             <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                  data-bs-toggle="dropdown" aria-expanded="false">
+                                                  Digital Egypt Youth
+                                             </a>
+                                             <ul class="dropdown-menu mt-0 rounded-0 border-0 p-0 w-100">
+                                                  <li><a class="dropdown-item" href="#">One Month
+                                                            Initiative</a>
+                                                  </li>
+                                                  <li><a class="dropdown-item" href="#">Four Months
+                                                            Initiative</a>
+                                                  </li>
+                                                  <li><a class="dropdown-item" href="#">Evening
+                                                            Initiative</a>
+                                                  </li>
+                                                  <li><a class="dropdown-item" href="#">Creativa
+                                                            (Offline)</a>
+                                                  </li>
+                                             </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="#">Post Graduate Diploma</a>
+                                        </li>
+                                        <li class="nav-item">
+                                             <a class="nav-link" href="#">News and Events</a>
+                                        </li>
+                                   </ul>
                               </div>
                          </div>
                     </div>
-               </nav>
+                    <div class="container-fluid login-box">
+                         <div class="login container d-flex flex-row align-items-center gap-4 justify-content-end"
+                              style="font-size: 14px;">
+                              <div class="login d-flex flex-row align-items-center gap-2 ">
+                                   <i class="fa-thin fa-arrow-right-to-bracket"></i>
+                                   <a href="#">Login</a>
+                              </div>
+                              <a href="#">Create Account</a>
+                         </div>
+                    </div>
+               </div>
+               <div class="headings container-fluid container-lg text-white flex-">
+                    <h1>National Telecommunication Institute</h1>
+                    <h2 class="mt-2">Shaping the future of digital scene in Egypt</h2>
+               </div>
+               <div class="nti-up container-fluid container-lg " id="nti">
+                    <p class="text-white container-fluid">NTI</p>
+               </div>
+          </section>
+          <section class="nti-vision section-head container py-4 ">
+               <h2 class="mb-4">NTI's Vision</h2>
+               <p>The National Telecommunication Institute (NTI), being a reputed scientific, educational and research institution founded in 1983 with the mandate of becoming the center of excellence for telecommunication education, training, research and development and consultancy services, is devoting all of its resources to the build up the pillars of development and is well prepared and well equipped more than ever to play a major role in the fast paced development of the ICT industry.</p>
+               <a href="#" class="d-flex justify-content-between align-items-center mt-4">Know More <i class="fa-solid fa-arrow-right"></i></a>
           </section>
           <!-- End Landing -->
      </main>
