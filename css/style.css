@@ -393,3 +393,54 @@ ul {
     border-radius: 30px;
 }
 /* End NTI Vision */
+/* Start Initiatives*/
+.bg-initiative{
+    background-image: url(../images/Ancient-Egypt.jpg);
+    height: 460px;
+    background-color: #4e4ca77a;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+
+}
+.initiative-section{
+    position: relative;
+}
+.initiative-content{
+    padding: 30px;
+    background-color: white;
+    border-top: 4px solid var(--main-color);
+    width: 420px;
+    position: absolute;
+    top: 40px;
+}
+.initiative-content h2{
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 15px;
+}
+.initiative-content p{
+    padding-bottom: 15px;
+}
+.initiative-content a{
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 20px;
+}
+.initiative-content a i{
+    color: white;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    font-size: 14px;
+}
+/* End Initiatives */
