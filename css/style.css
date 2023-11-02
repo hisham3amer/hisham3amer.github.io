@@ -395,7 +395,7 @@ ul {
 /* End NTI Vision */
 /* Start Initiatives*/
 .bg-initiative{
-    background-image: url(../images/Ancient-Egypt.jpg);
+
     height: 460px;
     background-color: #4e4ca77a;
     background-size: cover;
@@ -403,6 +403,9 @@ ul {
     background-repeat: no-repeat;
     background-blend-mode: overlay;
 
+}
+.sec-one{
+    background-image: url(../images/Ancient-Egypt.jpg);
 }
 .initiative-section{
     position: relative;
@@ -413,7 +416,11 @@ ul {
     border-top: 4px solid var(--main-color);
     width: 420px;
     position: absolute;
-    top: 40px;
+    top: 60px;
+}
+.content-one{
+    left: 0;
+    top: 60px;
 }
 .initiative-content h2{
     color: var(--main-color);
@@ -424,10 +431,22 @@ ul {
 .initiative-content p{
     padding-bottom: 15px;
 }
-.initiative-content a{
+.initiative-content a:first-of-type{
+    position: relative;
+}
+.initiative-content a:first-of-type::after{
+    content: "";
+    position: absolute;
+    height:3px;
+    background-color:var(--main-color);
+    width:80px;
+    bottom: 5px;
+    left: 0;
+}
+.initiative-content a:last-of-type{
     color: var(--main-color);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
 }
 .initiative-content a i{
     color: white;
@@ -442,5 +461,19 @@ ul {
     background-color: var(--main-color);
     border-radius: 50%;
     font-size: 14px;
+}
+.sec-two{
+    background-image: url(../images/Diploma.jpg);
+}
+.content-two{
+    right: 0;
+    top: 60px;
+}
+.sec-three{
+    background-image: url(../images/image-3.png);
+}
+.content-three{
+    left: 0;
+    top: 60px;
 }
 /* End Initiatives */
