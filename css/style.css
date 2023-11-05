@@ -395,14 +395,12 @@ ul {
 /* End NTI Vision */
 /* Start Initiatives*/
 .bg-initiative{
-
     height: 460px;
     background-color: #4e4ca77a;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
-
 }
 .sec-one{
     background-image: url(../images/Ancient-Egypt.jpg);
@@ -415,12 +413,12 @@ ul {
     background-color: white;
     border-top: 4px solid var(--main-color);
     width: 420px;
+    height: 380px;
     position: absolute;
-    top: 60px;
+    top: calc(50% + 40px);
 }
 .content-one{
     left: 0;
-    top: 60px;
 }
 .initiative-content h2{
     color: var(--main-color);
@@ -440,7 +438,7 @@ ul {
     height:3px;
     background-color:var(--main-color);
     width:80px;
-    bottom: 5px;
+    bottom: 15px;
     left: 0;
 }
 .initiative-content a:last-of-type{
@@ -467,13 +465,29 @@ ul {
 }
 .content-two{
     right: 0;
-    top: 60px;
 }
 .sec-three{
     background-image: url(../images/image-3.png);
 }
 .content-three{
     left: 0;
-    top: 60px;
+}
+@media (max-width: 991px){
+    .int{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .initiative-section{
+        position: relative;
+        width: 100%;
+        padding: 0;
+    }
+    .initiative-content{
+        position: relative;
+        width: 100%;
+    }
+    .bg-initiative{
+
+    }
 }
 /* End Initiatives */
