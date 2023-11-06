@@ -510,7 +510,7 @@ ul {
         height: 280px;
     }
     .bg-initiative{
-        height: 250px;
+        height: 300px;
     }
     .sec-three{
         background-image: url(../images/cisco.png);
@@ -534,3 +534,83 @@ ul {
     }
 }
 /* End Initiatives */
+/* Start Departments */
+.departments{
+
+}
+.department{
+
+}
+.dept{
+    margin-bottom: 40px;
+}
+.dept-head{
+    width:100%;
+    border: 2px solid var(--main-color);
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 60px;
+    padding: 10px 30px;
+    position: relative;
+    overflow: hidden;
+}
+.dept-head::before{
+    content: "";
+    position: absolute;
+    width: 95px;
+    height: 100%;
+    left: -20px;
+    transform: skewX(-30deg);
+    background-color: var(--main-color);
+}
+.dept-head::after{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    left: 88px;
+    transform: skewX(-30deg);
+    background-color: var(--main-color);
+}
+.dept-head div{
+    display: flex;
+    align-items:center;
+}
+.dept-num{
+    padding-right: 90px;
+    z-index: 1;
+    font-size: 50px;
+    font-weight: 800;
+    color: white;
+}
+.dept-head h3:last-of-type{
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--main-color);
+}
+.dept-head i{
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--main-color);
+}
+.dept-content{
+    width:100%;
+    border: 2px solid var(--main-color);
+    border-top: 0;
+    display:flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items:center;
+    padding:20px 100px;
+}
+.dept-content .description{
+    font-size: 30px;
+    color: #3A3A3A;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.dept-content img{
+    height: 240px;
+}
+/* End Departments */
