@@ -380,6 +380,16 @@ ul {
     bottom: -5px;
     left: 0;
 }
+@media (max-width:767px){
+    .section-head h2{
+        font-size: 40px;
+    }
+    .section-head h2::after{
+        width:90px;
+        height:4px;
+    }
+
+}
 .nti-vision p{
     font-size:20px;
     font-weight: 500 !important;
@@ -428,6 +438,7 @@ ul {
 }
 .initiative-content p{
     padding-bottom: 15px;
+    font-weight: 500;
 }
 .initiative-content a:first-of-type{
     position: relative;
@@ -468,6 +479,17 @@ ul {
 }
 .sec-three{
     background-image: url(../images/image-3.png);
+
+}
+.sec-three .container{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.sec-three img{
+    height: 200px;
+
 }
 .content-three{
     left: 0;
@@ -485,9 +507,30 @@ ul {
     .initiative-content{
         position: relative;
         width: 100%;
+        height: 280px;
     }
     .bg-initiative{
-
+        height: 250px;
+    }
+    .sec-three{
+        background-image: url(../images/cisco.png);
+    }
+    .sec-three img{
+        display: none;
+    
+    }
+    .sec-three img{
+        height: 150px;
+    }
+}
+@media (max-width: 767px){
+    .initiative-content{
+        height: 330px;
+    }
+}
+@media (max-width: 575px){
+    .initiative-content{
+        height: 380px;
     }
 }
 /* End Initiatives */
