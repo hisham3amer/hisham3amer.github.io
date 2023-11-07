@@ -508,6 +508,7 @@ ul {
         position: relative;
         width: 100%;
         height: 280px;
+        border-bottom: 2px solid var(--main-color);
     }
     .bg-initiative{
         height: 300px;
@@ -542,7 +543,7 @@ ul {
 
 }
 .dept{
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 .dept-head{
     width:100%;
@@ -598,11 +599,12 @@ ul {
     width:100%;
     border: 2px solid var(--main-color);
     border-top: 0;
-    display:flex;
+    display:none;
     gap: 20px;
     justify-content: space-between;
     align-items:center;
     padding:20px 100px;
+
 }
 .dept-content .description{
     font-size: 30px;
@@ -666,34 +668,41 @@ ul {
     }
 }
 @media (max-width: 575px){
+    .section-head h2{
+        font-size: 28px;
+    }
+    .dept{
+        margin-bottom: 20px;
+    }
     .dept-head{
-        height: 50px;
-        padding: 10px 15px 10px 10px;
+        height: 40px;
+        padding: 10px 15px 10px 15px;
     }
     .dept-head::before{
         width: 65px;
     }
     .dept-head::after{
-        left: 58px;
+        left: 53px;
     }
     .dept-num{
-        padding-right: 75px;
+        padding-right: 60px;
         font-size: 30px;
     }
     .dept-head h3:last-of-type{
         font-size: 16px;
+        font-weight: 800;
     }
     .dept-head i{
         font-size: 30px;
     }
     .dept-content{
-        padding:0px 20px 20px;
+        padding:0px 7px 20px;
     }
     .dept-content .description{
-        font-size: 20px;
+        font-size: 17px;
     }
     .dept-content img{
-        height: 180px;
+        height: 160px;
     }
 }
 /* End Departments */

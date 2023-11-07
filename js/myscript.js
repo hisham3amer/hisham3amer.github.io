@@ -72,4 +72,16 @@ if (scrollY<140 && window.matchMedia('screen and (min-width: 767px)').matches){
 }
 };
 
-
+// Start Departments
+let departmentName= document.querySelectorAll('.dept-head');
+let departmentContent= document.querySelectorAll('.dept-content');
+let downArrow = document.querySelectorAll('.dept-head i');
+for (let i=0 ; i<5 ; i++){
+    function showContent(){
+      departmentContent[i].classList.toggle('d-flex');
+      downArrow[i].classList.toggle('fa-caret-down');
+      downArrow[i].classList.toggle('fa-caret-right');
+    }
+    departmentName[i].onclick=showContent;
+} 
+// End Deparments
