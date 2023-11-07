@@ -551,7 +551,7 @@ ul {
     justify-content: space-between;
     align-items:center;
     height: 60px;
-    padding: 10px 30px;
+    padding: 10px 30px 10px 25px;
     position: relative;
     overflow: hidden;
 }
@@ -590,7 +590,7 @@ ul {
     color: var(--main-color);
 }
 .dept-head i{
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 800;
     color: var(--main-color);
 }
@@ -612,5 +612,88 @@ ul {
 }
 .dept-content img{
     height: 240px;
+}
+@media (max-width: 1399px){
+    .dept-content .description{
+        font-size: 25px;
+    }
+    .dept-content img{
+        height: 220px;
+    }
+}
+@media (max-width: 991px){
+    .dept-content{
+        flex-direction: column-reverse;
+        gap: 0px;
+        padding:0px 40px 20px;
+    }
+    .dept-content .description{
+        font-size: 22px;
+        text-align: center;
+    }
+    .dept-content img{
+        height: 200px;
+    }
+}
+@media (max-width: 767px){
+    .dept-head{
+        height: 50px;
+        padding: 10px 25px 10px 15px;
+    }
+    .dept-head::before{
+        width: 75px;
+    }
+    .dept-head::after{
+        left: 68px;
+
+    }
+    .dept-num{
+        padding-right: 75px;
+        font-size: 40px;
+    }
+    .dept-head h3:last-of-type{
+        font-size: 22px;
+    }
+    .dept-head i{
+        font-size: 30px;
+
+    }
+    .dept-content .description{
+        font-size: 20px;
+    }
+    .dept-content img{
+        height: 180px;
+    }
+}
+@media (max-width: 575px){
+    .dept-head{
+        height: 50px;
+        padding: 10px 15px 10px 10px;
+    }
+    .dept-head::before{
+        width: 65px;
+    }
+    .dept-head::after{
+        left: 58px;
+    }
+    .dept-num{
+        padding-right: 75px;
+        font-size: 30px;
+    }
+    .dept-head h3:last-of-type{
+        font-size: 16px;
+    }
+    .dept-head i{
+        font-size: 30px;
+    }
+    .dept-content{
+        padding:0px 20px 20px;
+    }
+    .dept-content .description{
+        font-size: 20px;
+    }
+    .dept-content img{
+        height: 180px;
+    }
 }
 /* End Departments */
