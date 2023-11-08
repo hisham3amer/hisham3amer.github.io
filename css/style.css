@@ -388,7 +388,6 @@ ul {
         width:90px;
         height:4px;
     }
-
 }
 .nti-vision p{
     font-size:20px;
@@ -479,7 +478,6 @@ ul {
 }
 .sec-three{
     background-image: url(../images/image-3.png);
-
 }
 .sec-three .container{
     height: 100%;
@@ -489,7 +487,6 @@ ul {
 }
 .sec-three img{
     height: 200px;
-
 }
 .content-three{
     left: 0;
@@ -518,7 +515,6 @@ ul {
     }
     .sec-three img{
         display: none;
-    
     }
     .sec-three img{
         height: 150px;
@@ -537,10 +533,8 @@ ul {
 /* End Initiatives */
 /* Start Departments */
 .departments{
-
 }
 .department{
-
 }
 .dept{
     margin-bottom: 30px;
@@ -608,7 +602,6 @@ ul {
     justify-content: space-between;
     align-items:center;
     padding:20px 100px;
-
 }
 .dept-content .description{
     font-size: 30px;
@@ -651,7 +644,6 @@ ul {
     }
     .dept-head::after{
         left: 68px;
-
     }
     .dept-num{
         padding-right: 75px;
@@ -662,7 +654,6 @@ ul {
     }
     .dept-head i{
         font-size: 30px;
-
     }
     .dept-content .description{
         font-size: 20px;
@@ -710,3 +701,45 @@ ul {
     }
 }
 /* End Departments */
+/* Start PCB Lap */
+.pcb{
+    background-image: url(../images/PCB-\ Landscape.jpg);
+    height: 460px;
+    /* background-color: rgba(33, 117, 185, 0.8); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-blend-mode: overlay; */
+    position: relative;
+}
+.pcb::before{
+    content: " ";
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(33, 117, 185, 0.8);
+    height:100%; 
+    width:100%;
+    /* filter: brightness(50%); */
+    z-index: 1;
+}
+.pcb>div{
+    position: relative;
+    z-index:2;
+    color: white;
+}
+.section-head.pcb h2{
+    color: white;
+}
+.section-head.pcb h2::after{
+    height:5px;
+    background-color:white;
+    width:110px;
+    bottom: -5px;
+    left: 0;
+}
+.pcb-desc{
+    font-size: 26px;
+    font-weight: 500;
+}
+/* End PCB Lap */
