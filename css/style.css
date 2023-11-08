@@ -373,7 +373,7 @@ ul {
 }
 .section-head h2::after{
     content: "";
-    position: absolute;
+    position: absolute;.section-head h2
     height:5px;
     background-color:var(--main-color);
     width:110px;
@@ -666,6 +666,10 @@ ul {
     .section-head h2{
         font-size: 28px;
     }
+    .section-head h2::after{
+        width: 60px;
+        height: 3px;
+    }
     .dept{
         margin-bottom: 20px;
     }
@@ -704,7 +708,7 @@ ul {
 /* Start PCB Lap */
 .pcb{
     background-image: url(../images/PCB-\ Landscape.jpg);
-    height: 460px;
+    /* height: 460px; */
     /* background-color: rgba(33, 117, 185, 0.8); */
     background-size: cover;
     background-position: center;
@@ -741,5 +745,85 @@ ul {
 .pcb-desc{
     font-size: 26px;
     font-weight: 500;
+    margin-bottom: 48px;
+}
+.services h3{
+    font-weight:bold;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+.services-list{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.services-list ul li{
+    position: relative;
+    padding-left: 35px;
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+.services-list ul li::before{
+    content:"";
+    background-image: url('/images/Microchip.png');
+    background-size: 30px 30px;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 30px; 
+    height: 30px;
+    position: absolute;
+}
+.services a{
+    color: white;
+    width: 140px;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 2px solid white;
+    margin-left: auto;
+}
+@media (max-width:767px){
+    .services-list{
+        flex-direction: column;
+        align-items:flex-start;
+    }
+    .services a{
+        color: white;
+        width: 140px;
+        padding: 10px 15px;
+        font-weight: bold;
+        border-radius: 30px;
+        border: 2px solid white;
+        margin-left: calc(50% - 70px);
+    }
+    .services a i{
+        display: none;
+    }
+}
+@media (max-width:575px){
+    .pcb-desc{
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+    .section-head.pcb h2::after{
+        height:3px;
+        width:60px;
+    }
+    .services h3{
+        font-size: 23px;
+        margin-bottom: 15px;
+    }
+    .services-list ul li{
+        padding-left: 35px;
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+    .services-list ul li::before{
+        background-size: 25px 25px;
+        width: 25px; 
+        height: 25px;
+    }
 }
 /* End PCB Lap */
