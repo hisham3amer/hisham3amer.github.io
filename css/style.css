@@ -373,8 +373,8 @@ ul {
 }
 .section-head h2::after{
     content: "";
-    position: absolute;.section-head h2
-    height:5px;
+    position: absolute;
+    height: 5px;
     background-color:var(--main-color);
     width:110px;
     bottom: -5px;
