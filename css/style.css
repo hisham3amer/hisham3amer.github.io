@@ -555,6 +555,7 @@ ul {
     padding: 10px 30px 10px 25px;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 .dept-head::before{
     content: "";
@@ -589,6 +590,9 @@ ul {
     font-size: 30px;
     font-weight: 800;
     color: var(--main-color);
+}
+.dept-head:hover h3:last-of-type{
+    text-decoration:underline;
 }
 .dept-head i{
     font-size: 40px;
