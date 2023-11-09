@@ -827,3 +827,56 @@ ul {
     }
 }
 /* End PCB Lap */
+/* Start News */
+.nti-news{
+
+}
+.nti-news>div{
+
+}
+.news{
+    display: flex;
+    justify-content: space-between;
+
+    gap: 70px;
+}
+.news .left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.news .left img{
+    object-fit: cover;
+    object-position: 0px -33px;;
+    height: 310px;
+    margin-bottom: 30px;
+}
+.news-desc{
+    padding: 0 10px 0 20px;
+    border-left: 5px solid var(--main-color);
+}
+.news-desc h3{
+    margin-bottom: 20px;
+}
+.news-desc h3{
+    color: var(--main-color);
+    font-weight: 600;
+}
+.news-desc p{
+    margin:0;
+    font-size:18px;
+}
+
+.news .right{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+
+}
+.news .right .top{
+    height: 310px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+/* End News */
