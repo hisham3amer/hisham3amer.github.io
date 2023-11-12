@@ -865,12 +865,13 @@ ul {
 .news-desc p{
     margin:0;
     font-size:18px;
+    color:#696969;
 }
 
 .news .right{
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; */
+    justify-content: space-between;
 
 }
 .news .right .top{
@@ -878,5 +879,14 @@ ul {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+}
+.news .right>a{
+    padding: 15px 30px;
+    color:white;
+    font-weight: bold;
+    background-color: var(--main-color);
+    border-radius: 30px;
+    align-self: flex-end;
+    font-size: 20px;
 }
 /* End News */
