@@ -1012,4 +1012,58 @@ ul {
 footer{
     background-color: rgb(23, 23, 23);
 }
+.foot-section{
+    padding-left:25px;
+    border-left:5px solid var(--main-color);
+    height:fit-content;
+    margin-bottom: 40px;
+}
+.foot-section h3{
+    color:white;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.foot-section ul a{
+    color: rgb(176, 176, 176);
+    transition: 0.3s;
+}
+.foot-section ul a:hover{
+    color: white;
+}
+.foot-section ul li{
+    transition: 0.3s;
+}
+.foot-section ul li:hover{
+    transform: translateX(10px);
+}
+.foot-section ul ul{
+    padding-left: 25px;
+}
+
+.foot-section>a,
+.stay-in-touch a{
+    color:rgb(176, 176, 176);
+    transition: 0.3s;
+}
+.foot-section>a i,
+.stay-in-touch a i{
+    font-size: 30px;
+    transition: 0.3s;
+}
+.foot-section>a:hover{
+    color: white;
+}
+.stay-in-touch a:nth-of-type(1):hover i{
+    color: rgb(8 99 247);
+}
+.stay-in-touch a:nth-of-type(2):hover i{
+    color: rgb(0 119 175);
+}
+.stay-in-touch a:nth-of-type(3):hover i{
+    color: rgb(8 99 247);
+}
+.stay-in-touch a:nth-of-type(4):hover i{
+    color: rgb(8 99 247);
+}
+
 /* End Footer */
