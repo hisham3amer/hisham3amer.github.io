@@ -957,6 +957,9 @@ ul {
     }
 }
 /* Start Consultaion */
+.consult{
+    padding-bottom: 75px !important;
+}
 .consult h2{
     text-align: center;
 }
@@ -1029,8 +1032,10 @@ footer{
 }
 .foot-section ul a:hover{
     color: white;
+    text-decoration: underline;
 }
 .foot-section ul li{
+    width: fit-content;
     transition: 0.3s;
 }
 .foot-section ul li:hover{
@@ -1048,7 +1053,7 @@ footer{
 .foot-section>a i,
 .stay-in-touch a i{
     font-size: 30px;
-    transition: 0.3s;
+    transition: all 0.3s;
 }
 .foot-section>a:hover{
     color: white;
@@ -1057,13 +1062,27 @@ footer{
     color: rgb(8 99 247);
 }
 .stay-in-touch a:nth-of-type(2):hover i{
-    color: rgb(0 119 175);
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 .stay-in-touch a:nth-of-type(3):hover i{
-    color: rgb(8 99 247);
+    color: rgb(0 119 175);
 }
 .stay-in-touch a:nth-of-type(4):hover i{
-    color: rgb(8 99 247);
+    color: rgb(53 172 225);
 }
-
+.stay-in-touch+a,
+.stay-in-touch+a h3{
+    display: inline-block;
+    width: fit-content;
+}
+.foot-section a h3:hover{
+    text-decoration: underline;
+}
+footer>div:last-of-type{
+    border-top: 1px solid rgb(176, 176, 176);
+    color:rgb(176, 176, 176);
+}
 /* End Footer */
