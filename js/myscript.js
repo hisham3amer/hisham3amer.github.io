@@ -81,25 +81,19 @@ let downArrow = document.querySelectorAll('.dept-head i');
 //       departmentContent[i].classList.toggle('d-flex');
 //       downArrow[i].classList.toggle('fa-caret-down');
 //       downArrow[i].classList.toggle('fa-caret-right');
-//     }
-    for (let i=0 ; i<5 ; i++){
+
+for (let i=0 ; i<5 ; i++){
+    function showContent(){
       if (downArrow[i].className == 'fa-solid fa-caret-right'){
-        // for (let i=0 ; i<5 ; i++){
-            function showContent(){
-              departmentContent[i].classList.add('d-flex');
-              downArrow[i].classList.add('fa-caret-down');
-              downArrow[i].classList.remove('fa-caret-right');
-            }
-            departmentName[i].onclick=showContent;
-        } else if (downArrow[i].className == 'fa-solid fa-caret-down'){
-              function hideContent(){
-                departmentContent[i].classList.remove('d-flex');
-                downArrow[i].classList.remove('fa-caret-down');
-                downArrow[i].classList.add('fa-caret-right');
-              }
-              departmentName[i].onclick=hideContent;
-          } 
+            departmentContent[i].classList.add('d-flex');
+            downArrow[i].classList.add('fa-caret-down');
+            downArrow[i].classList.remove('fa-caret-right');
+      } else if (downArrow[i].className == 'fa-solid fa-caret-down'){
+              departmentContent[i].classList.remove('d-flex');
+              downArrow[i].classList.remove('fa-caret-down');
+              downArrow[i].classList.add('fa-caret-right');
+      } 
     }
-    // departmentName[i].onclick=showContent;
-// } 
+  departmentName[i].onclick=showContent;
+}
 // End Deparments
