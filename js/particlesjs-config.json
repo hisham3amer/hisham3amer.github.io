@@ -1,14 +1,14 @@
 {
   "particles": {
     "number": {
-      "value": 80,
+      "value": 50,
       "density": {
-        "enable": true,
+        "enable": false,
         "value_area": 800
       }
     },
     "color": {
-      "value": "#ffffff"
+      "value": ["#2075b9", "#00c3ff"]
     },
     "shape": {
       "type": "circle",
@@ -26,8 +26,8 @@
       }
     },
     "opacity": {
-      "value": 0.5,
-      "random": false,
+      "value": 1,
+      "random": true,
       "anim": {
         "enable": false,
         "speed": 1,
@@ -36,29 +36,30 @@
       }
     },
     "size": {
-      "value": 5,
+      "value": 3,
       "random": true,
       "anim": {
         "enable": false,
-        "speed": 40,
+        "speed": 100,
         "size_min": 0.1,
-        "sync": false
+        "sync": true
       }
     },
     "line_linked": {
       "enable": true,
-      "distance": 150,
-      "color": "#ffffff",
+      "distance": 30,
+      "color": "#2075b9",
       "opacity": 0.4,
       "width": 1
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 1,
       "direction": "none",
-      "random": false,
+      "random": true,
       "straight": false,
       "out_mode": "out",
+      "bounce": false,
       "attract": {
         "enable": false,
         "rotateX": 600,
@@ -71,7 +72,7 @@
     "events": {
       "onhover": {
         "enable": true,
-        "mode": "repulse"
+        "mode": "grab"
       },
       "onclick": {
         "enable": true,
@@ -81,9 +82,9 @@
     },
     "modes": {
       "grab": {
-        "distance": 400,
+        "distance": 120,
         "line_linked": {
-          "opacity": 1
+          "opacity": 0.5
         }
       },
       "bubble": {
@@ -94,7 +95,8 @@
         "speed": 3
       },
       "repulse": {
-        "distance": 200
+        "distance": 200,
+        "duration": 0.4
       },
       "push": {
         "particles_nb": 4
@@ -104,13 +106,5 @@
       }
     }
   },
-  "retina_detect": true,
-  "config_demo": {
-    "hide_card": false,
-    "background_color": "#b61924",
-    "background_image": "",
-    "background_position": "50% 50%",
-    "background_repeat": "no-repeat",
-    "background_size": "cover"
-  }
+  "retina_detect": true
 }

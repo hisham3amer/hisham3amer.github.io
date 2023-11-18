@@ -49,7 +49,7 @@ websiteSearch.onclick = websiteActive;
 // navLink.onclick = showDropDown;
 
 
-window.onscroll = function (e) {
+window.onscroll = function () {
 var vertical_position = 0;
 if (scrollY){
     //usual
@@ -62,14 +62,21 @@ else if (document.body){
     vertical_position = document.body.scrollTop;}
     // console.log(scrollY);
 var nti = document.getElementById("nti");
-if (scrollY<140 && window.matchMedia('screen and (min-width: 767px)').matches){
-    console.log(screen.width);
+if (scrollY<137 && window.matchMedia('screen and (min-width: 767px)').matches){
     nti.style.bottom = vertical_position + 0 + "px" ; //200 is arbitrary.. just to show you could now position it how you want
+    console.log(scrollY);
+    console.log(nti.style.top);
 }else if (window.matchMedia('screen and (max-width: 767px) and (min-width:575px)').matches && scrollY<90 ){
     nti.style.bottom = vertical_position + 0 + "px" ;
-} else if (window.matchMedia('screen and (max-width: 576px)').matches && scrollY<65){
+} else if (window.matchMedia('screen and (max-width: 576px)').matches && scrollY<52){
     nti.style.bottom = vertical_position + 0 + "px" ;
 }
+let toTop= document.getElementById('backToTop');
+if (scrollY > 150) { 
+  toTop.classList.add('show')}
+  else{
+    toTop.classList.remove('show')
+  }
 };
 
 // Start Departments
@@ -97,3 +104,16 @@ for (let i=0 ; i<5 ; i++){
   departmentName[i].onclick=showContent;
 }
 // End Deparments
+if (window.matchMedia('screen and (max-width: 415px)').matches){
+  document.querySelector('meta[name="viewport"]').setAttribute("content", "width=414, initial-scale=1.0");
+}
+// Start go to top
+// let toTop= document.getElementById('backToTop');
+// window.onscroll = function (){
+//   if (scrollY > 150) { 
+//     toTop.classList.add('show')}
+//     else{
+//       toTop.classList.remove('show')
+//     }
+// }
+// End Go To Top

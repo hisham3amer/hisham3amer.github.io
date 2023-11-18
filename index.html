@@ -9,6 +9,7 @@
      <!-- <link rel="stylesheet" href="font/bootstrap-icons.css"> -->
      <link rel="stylesheet" href="css/bootstrap.css">
      <link rel="stylesheet" href="css/all.css">
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
      <link rel="stylesheet" href="css/style.css">
      <script src="js/bootstrap.bundle.js"></script>
 </head>
@@ -16,20 +17,20 @@
      <div class="" id="dimming"></div>
      <main>
           <!-- Start Landing -->
-          <section class="landing container-fluid p-0 position-relative overflow-hidden ">
+          <section class="landing container-fluid p-0 position-relative overflow-hidden">
                <div class="all-navigation position-relative">
                     <ul class="nav utility-nav container d-flex justify-content-end p-0">
                          <li class="nav-item">
-                              <a class="nav-link" aria-current="page" href="#">NTI Mail</a>
+                              <a class="nav-link" aria-current="page" href="https://mail.nti.sci.eg/owa/auth/logon.aspx?replaceCurrent=1&url=https%3a%2f%2fmail.nti.sci.eg%2fowa%2f" target="_blank">NTI Mail</a>
                          </li>
                          <li class="nav-item">
-                              <a class="nav-link" href="#">Moodle</a>
+                              <a class="nav-link" href="http://www.ntiegypt.sci.eg/moodle/" target="_blank">Moodle</a>
                          </li>
                          <li class="nav-item">
                               <a class="nav-link" href="#">Tamamy</a>
                          </li>
                     </ul>
-                    <nav class="main-nav navbar navbar-expand-lg bg-body-tertiary bg-white">
+                    <nav class="main-nav navbar navbar-expand-lg bg-white ">
                          <div
                               class="nav-sections container-fluid container-lg d-flex flex-row justify-content-between align-items-center w-lg-100 position-relative p-0">
                               <a class="navbar-brand p-0 order-1 order-lg-0" href="index.html">
@@ -38,13 +39,13 @@
                               <button href="#" class="search-nti align-self-center d-flex align-items-center justify-content-center p-0 order-2"
                                    id="searchToggle"><i class="fa-solid fa-magnifying-glass icon" id="searchIcon"></i>
                               </button>
-                              <div class="search-website container-fluid d-flex flex-column flex-md-row justify-content-between p-0 " id="searchWebsite">
+                              <div class="search-website container-fluid d-flex flex-column flex-md-row justify-content-between p-0" id="searchWebsite">
                                    <div class="search-left col-12 col-md-8">
                                         <div class="search-buttons d-flex justify-content-center justify-content-md-start">
                                              <button class="active" id="websiteSearch">Website Search</button>
                                              <button id="courseSearch">Course Search</button>
                                         </div>
-                                        <input type="search" name="" id="searchData" class="col-12 p-2 mt-3 mb-1 rounded-0"
+                                        <input type="search" name="" id="searchData" class="col-12 p-2 mt-4 mb-1 rounded-0"
                                              placeholder="Search NTI Website">
                                    </div>
                                    <div class="search-right col-12 col-md-3 d-none" id="searchRight">
@@ -64,7 +65,7 @@
                                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 ">
                                              <li class="nav-item dropdown">
                                                   <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                                       data-bs-toggle="" aria-expanded="false">
                                                        About NTI
                                                   </a>
                                                   <ul class="dropdown-menu mt-0 rounded-0 border-0 p-0">
@@ -83,7 +84,7 @@
                                              </li>
                                              <li class="nav-item dropdown">
                                                   <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                                       data-bs-toggle="" aria-expanded="false">
                                                        Training Activities
                                                   </a>
                                                   <ul class="dropdown-menu mt-0 rounded-0 border-0 p-0">
@@ -101,7 +102,7 @@
                                              </li>
                                              <li class="nav-item dropdown">
                                                   <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                       data-bs-toggle="dropdown" aria-expanded="false">
+                                                       data-bs-toggle="" aria-expanded="false">
                                                        Digital Egypt Youth
                                                   </a>
                                                   <ul class="dropdown-menu mt-0 rounded-0 border-0 p-0">
@@ -135,14 +136,14 @@
                               </button>
                          </div>
                     </nav>
-                    <div class="container-fluid container-lg bg-body-tertiary bg-white p-0">
-                         <div class="collapse container m-0  navbar-collapse justify-content-between order-lg-1 order-lg-1 d-lg-none"
+                    <div class="container-fluid container-lg bg-body-tertiary p-0" style="background-color: white !important;">
+                         <div class="collapse container-fluid m-0  navbar-collapse justify-content-between order-lg-1 order-lg-1 d-lg-none"
                               id="navbarSupportedContent">
-                              <div class="nav-content">
-                                   <ul class="navbar-nav me-auto mb-lg-0 gap-2">
+                              <div class="nav-content container-fluid ">
+                                   <ul class="navbar-nav me-auto mb-lg-0 gap-2 bg-transparent">
                                         <li class="nav-item dropdown">
                                              <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                  data-bs-toggle="dropdown" aria-expanded="false">
+                                                  data-bs-toggle="" aria-expanded="false">
                                                   About NTI
                                              </a>
                                              <ul class="dropdown-menu mt-0 rounded-0 border-0 p-0 w-100">
@@ -161,7 +162,7 @@
                                         </li>
                                         <li class="nav-item dropdown">
                                              <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                  data-bs-toggle="dropdown" aria-expanded="false">
+                                                  data-bs-toggle="" aria-expanded="false">
                                                   Training Activities
                                              </a>
                                              <ul class="dropdown-menu mt-0 rounded-0 border-0 p-0 w-100">
@@ -179,7 +180,7 @@
                                         </li>
                                         <li class="nav-item dropdown">
                                              <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                  data-bs-toggle="dropdown" aria-expanded="false">
+                                                  data-bs-toggle="" aria-expanded="false">
                                                   Digital Egypt Youth
                                              </a>
                                              <ul class="dropdown-menu mt-0 rounded-0 border-0 p-0 w-100">
@@ -228,15 +229,21 @@
           </section>
           <!-- End Landing -->
           <!-- Start NTI Vision -->
-          <section class="nti-vision section-head container-fluid container-lg py-5 px-4">
-               <h2 class="mb-5">NTI's Vision</h2>
-               <p class="mb-5">The National Telecommunication Institute (NTI), being a reputed scientific, educational and research institution founded in 1983 with the mandate of becoming the center of excellence for telecommunication education, training, research and development and consultancy services, is devoting all of its resources to the build up the pillars of development and is well prepared and well equipped more than ever to play a major role in the fast paced development of the ICT industry.</p>
-               <a href="#" class="d-flex justify-content-between align-items-center mt-4">Know More <i class="fa-solid fa-arrow-right"></i></a>
+          <section class="nti-vision section-head container-fluid py-5 px-4 position-relative z-1"  >
+                    <div class="container-fluid p-0" id="particles-js"></div>
+                    <div class="container-fluid container-lg" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+                         <h2 class="mb-5">NTI's Vision</h2>
+                         <p class="mb-5">The National Telecommunication Institute (NTI), being a reputed scientific, educational and research institution founded in 1983 with the mandate of becoming the center of excellence for telecommunication education, training, research and development and consultancy services, is devoting all of its resources to the build up the pillars of development and is well prepared and well equipped more than ever to play a major role in the fast paced development of the ICT industry.</p>
+                         <a href="#" class="d-flex justify-content-between align-items-center mt-4">Know More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    
+               
+               
           </section>
           <!-- End NTI Vision -->
           <!-- Start Initiatives -->
-          <section class="container-fluid p-0 int">
-               <div class="container-fluid container-lg initiative-section">
+          <section class="container-fluid p-0 int position-relative z-3 overflow-hidden">
+               <div class="container-fluid container-lg initiative-section z-1" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-easing="ease-out">
                     <div class="initiative-content content-one d-flex flex-column justify-content-between">
                          <a href="#"><h2 class="">Digital Egypt Youth Initiative</h2></a>
                          <p class="pt-3 m-0">H.E. Mr. President Abdel Fattah ElSisi launched the technology learning initiative to build capacity of young calibers on the latest information, communications, and electronics technologies. <br>
@@ -245,10 +252,10 @@
                          <a href="#" class="d-flex align-items-center gap-2">Know More <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                </div>
-               <div class="bg-initiative sec-one container-fluid w-100"></div>
+               <div class="bg-initiative sec-one container-fluid w-100" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true"></div>
           </section>
-          <section class="container-fluid p-0 int">
-               <div class="container-fluid container-lg initiative-section">
+          <section class="container-fluid p-0 int position-relative z-2 overflow-hidden">
+               <div class="container-fluid container-lg initiative-section z-1" data-aos="fade-left" data-aos-duration="1500" data-aos-once="true">
                     <div class="initiative-content content-two d-flex flex-column justify-content-between">
                          <a href="#"><h2 class="">Post Graduate Diploma</h2></a>
                          <p class="pt-3 m-0">NTI offers a one-year post graduate diploma in information and communications engineering, accredited by the Egyptian Supreme Council of Universities. it is a thirty credit hours program offered in three terms specialized in: "Artificial Intelligence and Modern Technologies" or "Advanced Telecommunication Networks".
@@ -256,10 +263,10 @@
                          <a href="#" class="d-flex align-items-center gap-2">Know More <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                </div>
-               <div class="bg-initiative sec-two container-fluid w-100"></div>
+               <div class="bg-initiative sec-two container-fluid w-100" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true"></div>
           </section>
-          <section class="container-fluid p-0 int">
-               <div class="container-fluid container-lg initiative-section">
+          <section class="container-fluid p-0 int position-relative z-1 overflow-hidden">
+               <div class="container-fluid container-lg initiative-section z-1" data-aos="fade-right" data-aos-duration="1500" data-aos-once="true">
                     <div class="initiative-content content-three d-flex flex-column justify-content-between">
                          <a href="#"><h2 class="">NTI - Cisco Academy</h2></a>
                          <p class="pt-3 m-0">NTI has started with Cisco Networking Academy Program (CNAP) since 2001 as both Regional and Local Academy. NTI has been accredited by Cisco Systems in July 2006 as Cisco Academy Training Center (CATC) for MENA region. NTI was selected by Cisco Systems in May 2012 as an Instructor Training Center (ITC) and Academy Support Center (ASC).
@@ -267,7 +274,7 @@
                          <a href="#" class="d-flex align-items-center gap-2">Know More <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                </div>
-               <div class="bg-initiative sec-three container-fluid w-100">
+               <div class="bg-initiative sec-three container-fluid w-100" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true" >
                     <div class="container">
                          <img src="images/cisco_networking_academy_logo_full.png" alt="">
                     </div>
@@ -275,8 +282,8 @@
           </section>
           <!-- End Initiative -->
           <!-- Start Departments -->
-          <section class="container-fluid departments section-head container-fluid py-5 px-lg-0 px-4">
-               <div class="container-fluid container-lg deparment p-0">
+          <section class="container-fluid departments section-head container-fluid py-5 px-lg-0 px-4 position-relative z-1">
+               <div class="container-fluid container-lg deparment p-0" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
                     <h2 class="mb-5">NTI's Scientific Departments</h2>
                     <div class="dept container-fluid container-lg p-0">
                          <div class="dept-head">
@@ -357,8 +364,8 @@
           </section>
           <!-- End Departments -->
           <!-- Start PCB Lap -->
-          <section class="container-fluid pcb section-head container-fluid py-5 px-lg-0 px-4">
-               <div class="container-fluid container-lg p-0">
+          <section class="container-fluid pcb section-head container-fluid py-5 px-lg-0 px-4" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+               <div class="container-fluid container-lg p-0" >
                     <h2 class="mb-5">NTI PCB Lap</h2>
                     <p class="pcb-desc">PCB Lab is a professional PCB fabrication service provider. Explore a wide range of affordable PCB fabrication services, we provide different sizes of high quality PCBs for both students and business sector.</p>
                     <div class="services">
@@ -387,8 +394,9 @@
           </section>
           <!-- End PCB Lap -->
           <!-- Start News -->
-          <section class="container-fluid nti-news section-head py-5 px-lg-0 px-4">
-               <div class="container-fluid container-lg deparment p-0">
+          <section class="container-fluid nti-news section-head py-5 px-lg-0 px-4 position-relative z-1">
+               <div class="container-fluid p-0" id="particles-js2"></div>
+               <div class="container-fluid container-lg deparment p-0" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
                     <h2 class="mb-5">Latest News</h2>
                     <div class="news container-fluid container-lg p-0 flex-column flex-lg-row">
                          <div class="left">
@@ -423,8 +431,9 @@
           <!-- End News -->
           <div class="separate-section"> </div>
           <!-- Start Consultaion -->
-          <section class="container-fluid consult section-head py-5 px-lg-0 px-4">
-               <div class="container-fluid container-lg p-0">
+          <section class="container-fluid consult section-head py-5 px-lg-0 px-4 position-relative z-1">
+               <div class="container-fluid p-0" id="particles-js3"></div>
+               <div class="container-fluid container-lg p-0" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
                     <h2 class="mb-3">Consultation and Technical Support</h2>
                     <p class="mb-5 consult-desc">NTI provides technical and policy expertise in the format of consultations in the field of telecommunication and information technology, for organizations and companies working in the same field in Egypt and the Arab Region.</p>
                     <div class="partners row row-cols-2 row-cols-md-3 row-cols-lg-5 justify-content-center g-4">
@@ -450,7 +459,6 @@
                          </div>
                     </div>
                </div>
-
           </section>
           <!-- End Consultaion -->
           <!-- Start Footer -->
@@ -510,8 +518,31 @@
                </div>
           </footer>
           <!-- End Footer -->
+          <a href="#" id="backToTop" class=""><i class="fa-solid fa-arrow-up-long"></i> </a>
 
      </main>
+     <script src="js/particles.js"></script>
+     <script src="js/app.js"></script>
+     <script src="js/lib/stats.js"></script>
+     <script>
+          particlesJS.load('particles-js', 'js/particlesjs-config.json', function() {
+          console.log('callback - particles.js config loaded');
+          });
+     </script>
+     <script>
+          particlesJS.load('particles-js2', 'js/particlesjs-config.json', function() {
+          console.log('callback - particles.js config loaded');
+          });
+     </script>
+     <script>
+          particlesJS.load('particles-js3', 'js/particlesjs-config.json', function() {
+          console.log('callback - particles.js config loaded');
+          });
+     </script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+          AOS.init();
+     </script>
      <script src="js/myscript.js"></script>
 </body>
 </html>
