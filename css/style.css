@@ -548,7 +548,7 @@ ul {
 }
 .initiative-content h2{
     color: var(--main-color);
-    font-weight: bold;
+    font-weight: 800;
     font-size: 30px;
     padding-bottom: 15px;
 }
@@ -628,6 +628,9 @@ ul {
         min-height: 280px;
         border-bottom: 2px solid var(--main-color);
     }
+    .initiative-content p{
+        font-size: 22px;
+    }
     .bg-initiative{
         height: 300px;
     }
@@ -645,10 +648,16 @@ ul {
     .initiative-content{
         min-height: 330px;
     }
+    .initiative-content p{
+        font-size: 18px;
+    }
 }
 @media (max-width: 575px){
     .initiative-content{
         min-height: 380px;
+    }
+    .initiative-content p{
+        font-size: 16px;
     }
 }
 /* End Initiatives */
