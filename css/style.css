@@ -1089,9 +1089,13 @@ ul {
     left:-100%;
     background-color: rgba(255, 255, 255, 0.253);
 }
+.news .right>a:hover{
+    box-shadow: none;
+}
 .news .right>a:hover:before{
     animation: link-hover 0.7s ease-in-out;
     -webkit-animation: link-hover 0.7s ease-in-out;
+
 }
 .news-desc h3:hover{
     text-decoration: underline;
