@@ -87,6 +87,11 @@ ul {
     opacity: 1;
     right: 40px;
 }
+@media (max-width:575px){
+    #backToTop.show{
+        right:20px;
+    }
+}
 /* Start Scroll bar style */
 ::-webkit-scrollbar{
     width: 12px;
@@ -95,12 +100,12 @@ ul {
     background-color: white;
     display: block;
     border-style: solid;
-    height: 13px;
-    width: 24px;
+    height: 12px;
+    width: 12px;
 }
 /* Up */
 ::-webkit-scrollbar-button:single-button:vertical:decrement {
-    border-width: 0 12px 12px 12px;
+    border-width: 0 6px 6px 6px;
     border-color: transparent transparent #2074b9c0 transparent;
 }
 
@@ -109,7 +114,7 @@ ul {
 }
 /* Down */
 ::-webkit-scrollbar-button:single-button:vertical:increment {
-    border-width: 8px 8px 0 8px;
+    border-width: 6px 6px 0 6px;
     border-color: #2074b9c0 transparent transparent transparent;
 }
 ::-webkit-scrollbar-button:vertical:single-button:increment:hover {
@@ -127,19 +132,13 @@ ul {
     background-color: var(--main-color);
 }
 ::-webkit-scrollbar-track{
-    background: white !important;
-    box-shadow: inset 0 0 5px grey;
+    background: white;
+    box-shadow: inset 0 0 2px grey;
 }
-::-webkit-scrollbar-track-piece{
+/* ::-webkit-scrollbar-track-piece{} */
+/* ::-webkit-resizer */
 
-}
-::-webkit-scrollbar-corner{
-
-}
-::-webkit-resizer{
-
-}
-End Scroll bar style
+/* End Scroll bar style */
 
 /* End Gloal Rules */
 /* Start Landing */
@@ -162,11 +161,11 @@ End Scroll bar style
         height: 600px;
     }
 } */
-.all-navigation{
-    /* position: -webkit-sticky;
+/* .all-navigation{
+    position: -webkit-sticky;
     position: sticky;
-    top: 0; */
-}
+    top: 0;
+} */
 .utility-nav .nav-item{
     background-color: #1778B6;
     transition: 0.3s;
@@ -722,6 +721,7 @@ End Scroll bar style
 }
 .dept{
     margin-bottom: 30px;
+    overflow: hidden;
 }
 .dept-head{
     width:100%;
@@ -788,12 +788,29 @@ End Scroll bar style
 }
 .dept-content{
     width:100%;
-    border: 2px solid var(--main-color);
-    border-top: 0;
-    display:none;
+    max-height:0px;
+    overflow: hidden;
+
+    /* display:none; */
     gap: 20px;
     justify-content: space-between;
     align-items:center;
+
+    transition: max-height 0.75s ease-out;
+    -webkit-transition: max-height 0.75s ease-out;
+    -moz-transition: max-height 0.75s ease-out;
+    -ms-transition: max-height 0.75s ease-out;
+    -o-transition: max-height 0.75s ease-out;
+}
+.dept-content.visible{
+    max-height: 300px;
+    transition: max-height 0.75s ease-in;
+    -webkit-transition: max-height 0.75s ease-in;
+    -moz-transition: max-height 0.75s ease-in;
+    -ms-transition: max-height 0.75s ease-in;
+    -o-transition: max-height 0.75s ease-in;
+    border: 2px solid var(--main-color);
+    border-top: 0;
     padding:20px 100px;
 }
 .dept-content .description{
@@ -952,6 +969,12 @@ End Scroll bar style
     justify-content: space-between;
     align-items: center;
 }
+@media (min-width:1200px){
+    .services-list .right{
+        padding-right: 80px;
+    }
+}
+
 .services-list ul li{
     position: relative;
     padding-left: 35px;
@@ -1075,7 +1098,7 @@ End Scroll bar style
 .news .left img{
     object-fit: cover;
     object-position: 0px -33px;
-    height: 310px;
+    height: 280px;
     margin-bottom: 30px;
 }
 .news-desc{
@@ -1086,7 +1109,7 @@ End Scroll bar style
 .news-desc h3{
     color: var(--main-color);
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .news-desc p{
     margin:0;
@@ -1098,10 +1121,10 @@ End Scroll bar style
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 37%;
+    width: 40%;
 }
 .news .right .top{
-    height: 310px;
+    height: 280px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -1241,6 +1264,18 @@ End Scroll bar style
     flex-direction:column;
     align-items: center;
     gap:25px;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.partner:hover{
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
 }
 .partner img{
     height: 180px;

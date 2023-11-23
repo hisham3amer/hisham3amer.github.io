@@ -94,11 +94,13 @@ let downArrow = document.querySelectorAll('.dept-head i');
 for (let i=0 ; i<5 ; i++){
     function showContent(){
       if (downArrow[i].className == 'fa-solid fa-caret-right'){
-            departmentContent[i].classList.add('d-flex');
+            departmentContent[i].classList.add('visible');
+            // departmentContent[i].classList.remove('p-0', 'border-0');
             downArrow[i].classList.add('fa-caret-down');
             downArrow[i].classList.remove('fa-caret-right');
       } else if (downArrow[i].className == 'fa-solid fa-caret-down'){
-              departmentContent[i].classList.remove('d-flex');
+              departmentContent[i].classList.remove('visible');
+              // departmentContent[i].classList.add('p-0', 'border-0');
               downArrow[i].classList.remove('fa-caret-down');
               downArrow[i].classList.add('fa-caret-right');
       } 
@@ -109,7 +111,7 @@ for (let i=0 ; i<5 ; i++){
 
 //for small screens
 if (window.matchMedia('screen and (max-width: 415px)').matches){
-  document.querySelector('meta[name="viewport"]').setAttribute("content", "width=414, initial-scale=1.0");
+  document.querySelector('meta[name="viewport"]').setAttribute("content", "width=414");
 }
 //start initiatives
 let initiativecont= document.querySelectorAll('.initiative-section');
