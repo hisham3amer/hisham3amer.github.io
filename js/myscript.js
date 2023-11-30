@@ -83,7 +83,7 @@ if (scrollY > 150) {
 
 // Start Departments
 let departmentName= document.querySelectorAll('.dept-head');
-let departmentContent= document.querySelectorAll('.dept-content');
+let departmentContent= document.querySelectorAll('.dept-container');
 let downArrow = document.querySelectorAll('.dept-head i');
 // for (let i=0 ; i<5 ; i++){
 //     function showContent(){
@@ -94,12 +94,12 @@ let downArrow = document.querySelectorAll('.dept-head i');
 for (let i=0 ; i<5 ; i++){
     function showContent(){
       if (downArrow[i].className == 'fa-solid fa-caret-right'){
-            departmentContent[i].classList.add('visible');
+            departmentContent[i].classList.add('shown');
             // departmentContent[i].classList.remove('p-0', 'border-0');
             downArrow[i].classList.add('fa-caret-down');
             downArrow[i].classList.remove('fa-caret-right');
       } else if (downArrow[i].className == 'fa-solid fa-caret-down'){
-              departmentContent[i].classList.remove('visible');
+              departmentContent[i].classList.remove('shown');
               // departmentContent[i].classList.add('p-0', 'border-0');
               downArrow[i].classList.remove('fa-caret-down');
               downArrow[i].classList.add('fa-caret-right');
@@ -123,7 +123,28 @@ for (let i=0 ; i<5 ; i++){
     initiativebg[i].removeAttribute('data-aos');
     initiative[i].setAttribute("data-aos", "fade-up")
   } else{
-    initiative[i].removeAttribute('data-aos')
+    initiative[i].removeAttribute('data-aos');
   }
 }
 //end initiatives
+// Start Preloader
+document.addEventListener("DOMContentLoaded", function () {
+  let progress = 0;
+  const progressBar = document.getElementById("progress");
+
+  function updateProgress() {
+      progress += 1;
+      progressBar.textContent = `${progress}%`;
+
+      if (progress >= 100) {
+          document.getElementById("preloader").style.opacity = "0";
+          document.getElementById("content").style.display = "block";
+      } else {
+          setTimeout(updateProgress, 20);
+      }
+  }
+
+  // Simulate the loading of your website content
+  setTimeout(updateProgress, 2000); // Adjust the time according to your needs
+});
+// End Preloader
