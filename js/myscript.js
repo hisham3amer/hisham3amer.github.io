@@ -1,3 +1,23 @@
+// Start Preloader
+document.addEventListener("DOMContentLoaded", function () {
+  let progress = 0;
+  const progressBar = document.getElementById("progress");
+
+  function updateProgress() {
+      progress += 1;
+      progressBar.textContent = `${progress}%`;
+
+      if (progress >= 100) {
+          document.getElementById("preloader").style.opacity = "0";
+          document.getElementById("content").style.display = "block";
+      } else {
+          setTimeout(updateProgress, 20);
+      }
+  }
+  // Simulate the loading of your website content
+  setTimeout(updateProgress, 2000); // Adjust the time according to your needs
+});
+// End Preloader
 let searchIcon = document.getElementById("searchIcon");
 let searchWebsite = document.getElementById("searchWebsite");
 let searchToggle = document.getElementById("searchToggle");
@@ -127,24 +147,3 @@ for (let i=0 ; i<5 ; i++){
   }
 }
 //end initiatives
-// Start Preloader
-document.addEventListener("DOMContentLoaded", function () {
-  let progress = 0;
-  const progressBar = document.getElementById("progress");
-
-  function updateProgress() {
-      progress += 1;
-      progressBar.textContent = `${progress}%`;
-
-      if (progress >= 100) {
-          document.getElementById("preloader").style.opacity = "0";
-          document.getElementById("content").style.display = "block";
-      } else {
-          setTimeout(updateProgress, 20);
-      }
-  }
-
-  // Simulate the loading of your website content
-  setTimeout(updateProgress, 2000); // Adjust the time according to your needs
-});
-// End Preloader
