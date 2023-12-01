@@ -158,10 +158,33 @@ ul {
     width: 100px; /* adjust the size of your preloader image */
     height: auto;
     margin-bottom: 20px;
+    animation: fading 1.5s ease-in infinite;
+    -webkit-animation: fading 1.5s ease-in infinite;
 }
 #loading-text {
-    font-size: 18px;
+    color: var(--main-color);
+    font-size:20px;
     margin-bottom: 20px;
+    animation: fading 1.5s ease-in infinite;
+    -webkit-animation: fading 1.5s ease-in infinite;
+}
+#progress{
+    color: var(--main-color);
+    font-size: 18px;
+    animation: fading 1.5s ease-in infinite forwards ;
+    -webkit-animation: fading 1.5s ease-in infinite forwards ;
+}
+
+@keyframes fading{
+    0%{
+        opacity: 100%;
+    }
+    50%{
+        opacity:60%
+    }
+    100%{
+        opacity: 100%;
+    }
 }
 /* End Preloader */
 /* End Gloal Rules */

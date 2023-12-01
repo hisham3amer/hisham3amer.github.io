@@ -4,14 +4,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const progressBar = document.getElementById("progress");
 
   function updateProgress() {
-      progress += 1;
+      progress += 4;
       progressBar.textContent = `${progress}%`;
 
       if (progress >= 100) {
-          document.getElementById("preloader").style.opacity = "0";
+          document.getElementById("preloader").style.display = "none";
           document.getElementById("content").style.display = "block";
+          particlesJS.load('particles-js', 'js/particlesjs-config.json', function() {
+          console.log('callback - particles.js config loaded');
+          });
+          particlesJS.load('particles-js2', 'js/particlesjs-config.json', function() {
+          console.log('callback - particles.js config loaded');
+          });
+          particlesJS.load('particles-js3', 'js/particlesjs-config.json', function() {
+          console.log('callback - particles.js config loaded');
+          });
+          AOS.init();
+
       } else {
-          setTimeout(updateProgress, 20);
+          setTimeout(updateProgress, 80);
       }
   }
   // Simulate the loading of your website content
