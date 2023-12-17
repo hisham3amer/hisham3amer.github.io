@@ -29,6 +29,20 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(updateProgress, 2000); // Adjust the time according to your needs
 });
 // End Preloader
+// Start offcanvas
+let navLink = document.querySelectorAll('.nav-link');
+let dropdownMenu = document.querySelectorAll('.dropdown-menu');
+for (let i=0 ; i<5 ; i++){
+  function showDropdown(){
+    if (window.matchMedia('screen and (max-width: 991px)').matches){
+        dropdownMenu[i].classList.add('shown');
+    } //else if (downArrow[i].className == 'fa-solid fa-caret-down'){
+            //departmentContent[i].classList.remove('shown');
+    //} 
+  }
+  navLink[i].onclick=showDropdown;
+}
+// End offcanvas
 let searchIcon = document.getElementById("searchIcon");
 let searchWebsite = document.getElementById("searchWebsite");
 let searchToggle = document.getElementById("searchToggle");
@@ -37,12 +51,12 @@ let dimming = document.getElementById("dimming");
 function searchOpen() {
   if (searchIcon.className == "fa-solid fa-magnifying-glass icon") {
     searchIcon.className = "fa-solid fa-xmark-large icon";
-    searchWebsite.style = "z-index: 31;";
+    searchWebsite.classList.remove('d-none');
     searchToggle.style = "background-color: white;";
     dimming.className = "covering-panel";
   } else if (searchIcon.className == "fa-solid fa-xmark-large icon") {
     searchIcon.className = "fa-solid fa-magnifying-glass icon";
-    searchWebsite.style = "z-index: -1;";
+    searchWebsite.classList.add('d-none');
     searchToggle.style = "background-color: transparent;";
     dimming.className = "";
   }
@@ -79,6 +93,7 @@ websiteSearch.onclick = websiteActive;
 // }
 // navLink.onclick = showDropDown;
 
+var prevScrollpos = window.scrollY;
 
 window.onscroll = function () {
 var vertical_position = 0;
@@ -93,6 +108,22 @@ else if (document.body){
     vertical_position = document.body.scrollTop;}
     // console.log(scrollY);
 var nti = document.getElementById("nti");
+let mainNav= document.getElementById("mainNav");
+if(scrollY>1){
+  mainNav.classList.add('condensed');
+}else{
+  mainNav.classList.remove('condensed');
+}
+
+let fixedNav= document.getElementById('fixedNav')
+  var currentScrollPos = window.scrollY;
+  if (prevScrollpos > currentScrollPos ) {
+    fixedNav.style.top = "0";
+  } else if (prevScrollpos < currentScrollPos && scrollY >900 ){
+    fixedNav.style.top = "-84px";
+  }
+  prevScrollpos = currentScrollPos;
+
 if (scrollY<137 && window.matchMedia('screen and (min-width: 767px)').matches){
     nti.style.bottom = vertical_position + 0 + "px" ; //200 is arbitrary.. just to show you could now position it how you want
     console.log(scrollY);
@@ -111,7 +142,15 @@ if (scrollY > 150) {
   }
 // End Go To Top
 };
+// window.onscroll = function() {scrollFunction()};
 
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     document.getElementById("navbar").style.top = "0";
+//   } else {
+//     document.getElementById("navbar").style.top = "-50px";
+//   }
+// }
 // Start Departments
 let departmentName= document.querySelectorAll('.dept-head');
 let departmentContent= document.querySelectorAll('.dept-container');
@@ -126,12 +165,10 @@ for (let i=0 ; i<5 ; i++){
     function showContent(){
       if (downArrow[i].className == 'fa-solid fa-caret-right'){
             departmentContent[i].classList.add('shown');
-            // departmentContent[i].classList.remove('p-0', 'border-0');
             downArrow[i].classList.add('fa-caret-down');
             downArrow[i].classList.remove('fa-caret-right');
       } else if (downArrow[i].className == 'fa-solid fa-caret-down'){
               departmentContent[i].classList.remove('shown');
-              // departmentContent[i].classList.add('p-0', 'border-0');
               downArrow[i].classList.remove('fa-caret-down');
               downArrow[i].classList.add('fa-caret-right');
       } 
