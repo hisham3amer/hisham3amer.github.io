@@ -30,15 +30,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // End Preloader
 // Start offcanvas
-let navLink = document.querySelectorAll('.nav-link');
-let dropdownMenu = document.querySelectorAll('.dropdown-menu');
-for (let i=0 ; i<5 ; i++){
+let navLink = document.querySelectorAll('.navlink');
+let dropdownMenu = document.querySelectorAll('.dropdownmenu');
+
+for (let i=0 ; i<3 ; i++){
+  if (window.matchMedia('screen and (max-width: 991px)').matches){
+    dropdownMenu[i].classList.remove('dropdown-menu');
+  } else{
+      dropdownMenu[i].classList.add('dropdown-menu');
+    }
   function showDropdown(){
     if (window.matchMedia('screen and (max-width: 991px)').matches){
-        dropdownMenu[i].classList.add('shown');
-    } //else if (downArrow[i].className == 'fa-solid fa-caret-down'){
-            //departmentContent[i].classList.remove('shown');
-    //} 
+        dropdownMenu[i].classList.toggle('shown');
+    }
   }
   navLink[i].onclick=showDropdown;
 }

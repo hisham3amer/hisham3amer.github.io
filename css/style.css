@@ -391,19 +391,15 @@ ul {
     }
 }
 @media (max-width:991px){
-.offcanvas .dropdown .dropdown-menu {
+.dropdownmenu {
     position: relative;
-    max-height: 0;
+    max-height: 0px;
     transition: max-height 0.75s ease-out;
     -webkit-transition: max-height 0.75s ease-out;
     -moz-transition: max-height 0.75s ease-out;
     -ms-transition: max-height 0.75s ease-out;
     -o-transition: max-height 0.75s ease-out;
     overflow: hidden;
-    padding: 0;
-    margin:0;
-    border: 2px solid var(--main-color);
-    border-top: 0;
     top:-2px;
 }
 }
@@ -943,14 +939,13 @@ ul {
     
 }
 .shown{
-    max-height: 350px ;
-    /* top: 100%; */
-    transition: max-height 0.75s ease-in;
-    -webkit-transition: max-height 0.75s ease-in;
-    -moz-transition: max-height 0.75s ease-in;
-    -ms-transition: max-height 0.75s ease-in;
-    -o-transition: max-height 0.75s ease-in;
-    
+    max-height: 350px !important ;
+    /*top: 100%;*/
+    transition: max-height 0.75s ease-in !important;
+    -webkit-transition: max-height 0.75s ease-in !important;
+    -moz-transition: max-height 0.75s ease-in !important;
+    -ms-transition: max-height 0.75s ease-in !important;
+    -o-transition: max-height 0.75s ease-in !important;
 }
 .dept-content .description{
     font-size: 30px;
