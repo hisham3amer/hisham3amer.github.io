@@ -32,19 +32,29 @@ document.addEventListener("DOMContentLoaded", function () {
 // Start offcanvas
 let navLink = document.querySelectorAll('.navlink');
 let dropdownMenu = document.querySelectorAll('.dropdownmenu');
-
-for (let i=0 ; i<3 ; i++){
-  if (window.matchMedia('screen and (max-width: 991px)').matches){
-    dropdownMenu[i].classList.remove('dropdown-menu');
-  } else{
-      dropdownMenu[i].classList.add('dropdown-menu');
+function updateDropdownClasses() {
+    for (let i = 0; i < 3; i++) {
+        if (window.matchMedia('screen and (max-width: 991px)').matches) {
+            dropdownMenu[i].classList.remove('dropdown-menu');
+        } else {
+            dropdownMenu[i].classList.add('dropdown-menu');
+        }
     }
-  function showDropdown(){
-    if (window.matchMedia('screen and (max-width: 991px)').matches){
+}
+function showDropdown(i) {
+    if (window.matchMedia('screen and (max-width: 991px)').matches) {
         dropdownMenu[i].classList.toggle('shown');
     }
-  }
-  navLink[i].onclick=showDropdown;
+}
+// Initial setup
+updateDropdownClasses();
+// Listen for resize events to update dropdown classes dynamically
+window.addEventListener('resize', updateDropdownClasses);
+// Attach event listeners to nav links
+for (let i = 0; i < 3; i++) {
+    navLink[i].addEventListener('click', function () {
+        showDropdown(i);
+    });
 }
 // End offcanvas
 let searchIcon = document.getElementById("searchIcon");

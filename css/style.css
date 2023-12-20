@@ -330,6 +330,11 @@ ul {
 .nav-content ul li ul li{
     position:relative;
 }
+@media (max-width:991px){
+    .nav-content ul li ul li{
+        width:95%;
+    }
+}
 .nav-content ul li ul li a{
     font-weight:bold;
     font-size: 14px;
@@ -400,6 +405,7 @@ ul {
     -ms-transition: max-height 0.75s ease-out;
     -o-transition: max-height 0.75s ease-out;
     overflow: hidden;
+    margin-left: 15px;
     top:-2px;
 }
 }
