@@ -199,6 +199,11 @@ ul {
     background-position: bottom;
     background-blend-mode: multiply;
 }
+@media (min-width:1400px){
+    .landing{
+        height: 800px;
+    }
+}
 /* @media (max-width:576px){
     .landing{
         height:600px;
@@ -571,6 +576,14 @@ ul {
         font-size: 20px !important;
     }
 }
+@media(min-width: 1400px){
+    .landing .headings h1{
+        font-size: 50px !important;
+    }
+    .landing .headings h2{
+        font-size: 35px !important;
+    }
+}
 /* End Headings */
 /* Start NTI */
 .nti-up{
@@ -586,6 +599,12 @@ ul {
     position: absolute;
     right:0;
     top: -134px;
+}
+@media (min-width:1400px){
+    .nti-up p{
+        font-size:340px;
+        top: -85px;
+    }
 }
 @media (max-width:767px){
     .nti-up p{
@@ -954,16 +973,27 @@ ul {
     -o-transition: max-height 0.75s ease-in !important;
 }
 .dept-content .description{
+    position:relative;
     font-size: 30px;
     color: #3A3A3A;
     font-weight: 500;
     line-height: 1.4;
-    overflow: hidden;
 }
 .dept-content img{
     height: 240px;
     overflow: hidden;
 }
+/* @media (min-width:992px){
+    .dept-content .description::before{
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: -15px;
+        height: 100%;
+        width: 6px;
+        background-color: var(--main-color);
+    }
+} */
 @media (max-width: 1399px){
     .dept-content .description{
         font-size: 25px;
