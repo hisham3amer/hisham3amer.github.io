@@ -30,20 +30,28 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // End Preloader
 // Start offcanvas
-let navLink = document.querySelectorAll('.navlink');
-let dropdownMenu = document.querySelectorAll('.dropdownmenu');
+let navLinks = document.querySelectorAll('.navlink');
+let dropdownMenus = document.querySelectorAll('.dropdownmenu');
+
 function updateDropdownClasses() {
     for (let i = 0; i < 3; i++) {
         if (window.matchMedia('screen and (max-width: 991px)').matches) {
-            dropdownMenu[i].classList.remove('dropdown-menu');
+            dropdownMenus[i].classList.remove('dropdown-menu');
         } else {
-            dropdownMenu[i].classList.add('dropdown-menu');
+            dropdownMenus[i].classList.add('dropdown-menu');
         }
     }
 }
 function showDropdown(i) {
     if (window.matchMedia('screen and (max-width: 991px)').matches) {
-        dropdownMenu[i].classList.toggle('shown');
+        // Remove 'shown' class from all other dropdowns
+        dropdownMenus.forEach((menu, index) => {
+            if (index !== i) {
+                menu.classList.remove('shown');
+            }
+        });
+        // Toggle 'shown' class for the clicked dropdown
+        dropdownMenus[i].classList.toggle('shown');
     }
 }
 // Initial setup
@@ -52,7 +60,7 @@ updateDropdownClasses();
 window.addEventListener('resize', updateDropdownClasses);
 // Attach event listeners to nav links
 for (let i = 0; i < 3; i++) {
-    navLink[i].addEventListener('click', function () {
+    navLinks[i].addEventListener('click', function () {
         showDropdown(i);
     });
 }
@@ -138,13 +146,17 @@ let fixedNav= document.getElementById('fixedNav')
   }
   prevScrollpos = currentScrollPos;
 
-if (scrollY<137 && window.matchMedia('screen and (min-width: 767px)').matches){
+if (scrollY<120 && window.matchMedia('screen and (min-width: 1399px)').matches){
     nti.style.bottom = vertical_position + 0 + "px" ; //200 is arbitrary.. just to show you could now position it how you want
     console.log(scrollY);
     console.log(nti.style.top);
-}else if (window.matchMedia('screen and (max-width: 767px) and (min-width:575px)').matches && scrollY<90 ){
+}else if (scrollY<135 && window.matchMedia('screen and (min-width: 767px) and (max-width: 1399px)').matches){
+    nti.style.bottom = vertical_position + 0 + "px" ; //200 is arbitrary.. just to show you could now position it how you want
+    console.log(scrollY);
+    console.log(nti.style.top);
+}else if (window.matchMedia('screen and (max-width: 767px) and (min-width:575px)').matches && scrollY<95){
     nti.style.bottom = vertical_position + 0 + "px" ;
-} else if (window.matchMedia('screen and (max-width: 576px)').matches && scrollY<52){
+} else if (window.matchMedia('screen and (max-width: 576px)').matches && scrollY<55){
     nti.style.bottom = vertical_position + 0 + "px" ;
 }
 // Start go to top
