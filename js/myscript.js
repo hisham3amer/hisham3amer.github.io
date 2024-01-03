@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function updateProgress() {
       progress += 4;
       progressBar.textContent = `${progress}%`;
-
       if (progress >= 100) {
           document.getElementById("preloader").style.display = "none";
           document.getElementById("content").style.display = "block";
@@ -20,13 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
           console.log('callback - particles.js config loaded');
           });
           AOS.init();
-
       } else {
           setTimeout(updateProgress, 80);
       }
   }
-  // Simulate the loading of your website content
-  setTimeout(updateProgress, 2000); // Adjust the time according to your needs
+  setTimeout(updateProgress, 2000);
 });
 // End Preloader
 // Start offcanvas
@@ -44,21 +41,16 @@ function updateDropdownClasses() {
 }
 function showDropdown(i) {
     if (window.matchMedia('screen and (max-width: 991px)').matches) {
-        // Remove 'shown' class from all other dropdowns
         dropdownMenus.forEach((menu, index) => {
             if (index !== i) {
                 menu.classList.remove('shown');
             }
         });
-        // Toggle 'shown' class for the clicked dropdown
         dropdownMenus[i].classList.toggle('shown');
     }
 }
-// Initial setup
 updateDropdownClasses();
-// Listen for resize events to update dropdown classes dynamically
 window.addEventListener('resize', updateDropdownClasses);
-// Attach event listeners to nav links
 for (let i = 0; i < 3; i++) {
     navLinks[i].addEventListener('click', function () {
         showDropdown(i);
@@ -107,28 +99,16 @@ function websiteActive() {
 }
 websiteSearch.onclick = websiteActive;
 
-// let navItem = document.querySelectorAll('.dropdown-menu');
-// let navLink = document.querySelectorAll('.nav-link');
-
-// function showDropDown(){
-//     navItem.style ='display:block;'
-// }
-// navLink.onclick = showDropDown;
-
 var prevScrollpos = window.scrollY;
 
 window.onscroll = function () {
 var vertical_position = 0;
 if (scrollY){
-    //usual
     vertical_position = scrollY;}
 else if (document.documentElement.clientHeight){
-    //ie
     vertical_position = document.documentElement.scrollTop;}
 else if (document.body){
-    //ie quirks
     vertical_position = document.body.scrollTop;}
-    // console.log(scrollY);
 var nti = document.getElementById("nti");
 let mainNav= document.getElementById("mainNav");
 if(scrollY>1){
@@ -147,11 +127,11 @@ let fixedNav= document.getElementById('fixedNav')
   prevScrollpos = currentScrollPos;
 
 if (scrollY<120 && window.matchMedia('screen and (min-width: 1399px)').matches){
-    nti.style.bottom = vertical_position + 0 + "px" ; //200 is arbitrary.. just to show you could now position it how you want
+    nti.style.bottom = vertical_position + 0 + "px" ;
     console.log(scrollY);
     console.log(nti.style.top);
 }else if (scrollY<135 && window.matchMedia('screen and (min-width: 767px) and (max-width: 1399px)').matches){
-    nti.style.bottom = vertical_position + 0 + "px" ; //200 is arbitrary.. just to show you could now position it how you want
+    nti.style.bottom = vertical_position + 0 + "px" ; 
     console.log(scrollY);
     console.log(nti.style.top);
 }else if (window.matchMedia('screen and (max-width: 767px) and (min-width:575px)').matches && scrollY<95){
@@ -168,24 +148,11 @@ if (scrollY > 150) {
   }
 // End Go To Top
 };
-// window.onscroll = function() {scrollFunction()};
 
-// function scrollFunction() {
-//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//     document.getElementById("navbar").style.top = "0";
-//   } else {
-//     document.getElementById("navbar").style.top = "-50px";
-//   }
-// }
 // Start Departments
 let departmentName= document.querySelectorAll('.dept-head');
 let departmentContent= document.querySelectorAll('.dept-container');
 let downArrow = document.querySelectorAll('.dept-head i');
-// for (let i=0 ; i<5 ; i++){
-//     function showContent(){
-//       departmentContent[i].classList.toggle('d-flex');
-//       downArrow[i].classList.toggle('fa-caret-down');
-//       downArrow[i].classList.toggle('fa-caret-right');
 
 for (let i=0 ; i<5 ; i++){
     function showContent(){
@@ -203,7 +170,6 @@ for (let i=0 ; i<5 ; i++){
 }
 // End Deparments
 
-//for small screens
 if (window.matchMedia('screen and (max-width: 415px)').matches){
   document.querySelector('meta[name="viewport"]').setAttribute("content", "width=414");
 }

@@ -38,12 +38,12 @@ ul {
     color: white;
 }
 .covering-panel {
-    background: rgba(0,0,0, 0.4);  /* opaque black*/
-    height: calc(100vh + 30px);                 /* height of the viewport*/
-    position: fixed;               /* always cover the screen*/
+    background: rgba(0,0,0, 0.4);
+    height: calc(100vh + 30px);
+    position: fixed;
     top:-30px;
-    width: 100%;                   /* width of the viewport*/
-    z-index: 29;                   /* stay on top of other elements*/
+    width: 100%;
+    z-index: 29;
 }
 #particles-js, #particles-js2 ,#particles-js3{
     height:100%;
@@ -93,53 +93,6 @@ ul {
         right:20px;
     }
 }
-/* Start Scroll bar style */
-/* ::-webkit-scrollbar{
-    width: 12px;
-}
-::-webkit-scrollbar-button:single-button {
-    background-color: white;
-    display: block;
-    border-style: solid;
-    height: 12px;
-    width: 12px;
-} */
-/* Up */
-/* ::-webkit-scrollbar-button:single-button:vertical:decrement {
-    border-width: 0 6px 6px 6px;
-    border-color: transparent transparent #2074b9c0 transparent;
-}
-
-::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
-    border-color: transparent transparent var(--main-color) transparent;
-} */
-/* Down */
-/* ::-webkit-scrollbar-button:single-button:vertical:increment {
-    border-width: 6px 6px 0 6px;
-    border-color: #2074b9c0 transparent transparent transparent;
-}
-::-webkit-scrollbar-button:vertical:single-button:increment:hover {
-    border-color: var(--main-color) transparent transparent transparent;
-}
-::-webkit-scrollbar-thumb{
-    background: #2074b9c0 ;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover{
-    background-color: var(--main-color);
-}
-::-webkit-scrollbar-track{
-    background: white;
-    box-shadow: inset 0 0 2px grey;
-} */
-/* ::-webkit-scrollbar-track-piece{} */
-/* ::-webkit-resizer */
-
-/* End Scroll bar style */
 /* Start PreLoader*/
 #preloader {
     position: fixed;
@@ -175,7 +128,6 @@ ul {
     animation: fading 1.5s ease-in infinite forwards ;
     -webkit-animation: fading 1.5s ease-in infinite forwards ;
 }
-
 @keyframes fading{
     0%{
         opacity: 100%;
@@ -204,21 +156,6 @@ ul {
         height: 800px;
     }
 }
-/* @media (max-width:576px){
-    .landing{
-        height:600px;
-    }
-}
-@media (max-height:414px){
-    .landing{
-        height: 600px;
-    }
-} */
-/* .all-navigation{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-} */
 .utility-nav .nav-item{
     background-color: #1778B6;
     transition: 0.3s;
@@ -227,15 +164,8 @@ ul {
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
 }
-/* .ut-nav{
-    position: fixed;
-    top: 0;
-    width: 100%;
-} */
 .utility-nav{
-    /* height:100%; */
     height: 30px;
-
 }
 .utility-nav .nav-item:hover{
     background-color: #18a6ff;
@@ -256,8 +186,6 @@ ul {
     -moz-transition: top 1s;
     -ms-transition: top 1s;
     -o-transition: top 1s;
-    /* height:max-content; */
-    /* height: min-content; */
 }
 .main-nav{
     z-index: 28;
@@ -274,15 +202,14 @@ ul {
 }
 .main-nav,.nav-content ul li a{
     padding-block: 10px;
-    /* border-bottom: 4px solid var(--main-color); */
     font-size: 16px;
     font-weight: bold;
 }
 .dropdown-toggle::after {
     border: none!important;
     font: normal normal normal 14px/1 FontAwesome;
-    content: "\f078"!important; /* the desired FontAwesome icon */
-    vertical-align: 0; /* to center vertically */
+    content: "\f078"!important;
+    vertical-align: 0;
 }
 .main-nav .nav-item a,
 .nav-content ul li a{
@@ -374,9 +301,6 @@ ul {
 .nav-content ul li ul li:hover:before{
     width:20px;
 }
-/* .landing .dropdown:hover .dropdown-menu {
-    display: block;
-} */
 .divide{
     position: relative;
 }
@@ -393,7 +317,6 @@ ul {
     color: var(--main-color) !important;
     font-size: 16px;
 }
-
 .offcanvas-header{
     border-bottom: 4px solid var(--main-color)
 }
@@ -443,9 +366,6 @@ ul {
     overflow: hidden;
     z-index:31;
 }
-/* div.search-website.container{
-    width:calc(100% - 1.5rem);
-} */
 .search-website .search-buttons{
     display: flex;
     flex-flow: nowrap row;
@@ -527,7 +447,7 @@ ul {
     background-color: rgb(197, 197, 197);
 }
 .search-right ul li a::after{
-    content: "\f054"!important; /* the desired FontAwesome icon */
+    content: "\f054"!important;
     border: none!important;
     position: absolute;
     font: normal normal normal 14px/1 FontAwesome;
@@ -609,7 +529,6 @@ ul {
     font-family: 'Archivo Black', sans-serif;
     font-size:330px;
     text-align: end;
-    /* line-height: 80px; */
     margin: 0;
     padding:0;
     position: absolute;
@@ -641,7 +560,6 @@ ul {
 }
 @media (max-height:414px){
     .nti-up p{
-        /* font-size:180px; */
         bottom: -400px;
     }
 }
@@ -871,10 +789,6 @@ ul {
 }
 /* End Initiatives */
 /* Start Departments */
-.departments{
-}
-.department{
-}
 .dept{
     margin-bottom: 30px;
     overflow: hidden;
@@ -892,7 +806,6 @@ ul {
     background-color: white;
     overflow: hidden;
     cursor: pointer;
-
 }
 .dept-head::before{
     content: "";
@@ -970,23 +883,16 @@ ul {
 .dept-content{
     width:100%;
     height: 100%;
-    /* max-height:0px; */
     box-sizing: border-box !important;
     display:flex;
     position: relative;
-    /* z-index: 1; */
-    /* top: -42px; */
     gap: 20px;
-    /* border: 2px solid var(--main-color);
-    border-top: 0; */
     padding:5px 100px;
     justify-content: space-between;
     align-items:center;
-    
 }
 .shown{
     max-height: 380px !important ;
-    /*top: 100%;*/
     transition: max-height 0.75s ease-in !important;
     -webkit-transition: max-height 0.75s ease-in !important;
     -moz-transition: max-height 0.75s ease-in !important;
@@ -1004,17 +910,6 @@ ul {
     height: 240px;
     overflow: hidden;
 }
-/* @media (min-width:992px){
-    .dept-content .description::before{
-        content: '';
-        position: absolute;
-        top: 0px;
-        left: -15px;
-        height: 100%;
-        width: 6px;
-        background-color: var(--main-color);
-    }
-} */
 @media (max-width: 1399px){
     .dept-content .description{
         font-size: 21px;
@@ -1112,12 +1007,9 @@ ul {
 /* Start PCB Lap */
 .pcb{
     background-image: url(../images/PCB-\ Landscape.jpg);
-    /* height: 460px; */
-    /* background-color: rgba(33, 117, 185, 0.8); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /* background-blend-mode: overlay; */
     position: relative;
 }
 .pcb::before{
@@ -1128,7 +1020,6 @@ ul {
     background-color: rgba(33, 117, 185, 0.8);
     height:100%; 
     width:100%;
-    /* filter: brightness(50%); */
     z-index: 1;
 }
 .pcb>div{
@@ -1151,7 +1042,6 @@ ul {
     font-weight: 500;
     margin-bottom: 48px;
 }
-
 .services h3{
     font-weight:bold;
     font-size: 32px;
@@ -1167,7 +1057,6 @@ ul {
         padding-right: 80px;
     }
 }
-
 .services-list ul li{
     position: relative;
     padding-left: 35px;
@@ -1271,12 +1160,6 @@ ul {
 }
 /* End PCB Lap */
 /* Start News */
-.nti-news{
-
-}
-.nti-news>div{
-
-}
 .news{
     display: flex;
     justify-content: space-between;
@@ -1298,7 +1181,6 @@ ul {
     padding: 0 10px 0 20px;
     border-left: 5px solid var(--main-color);
 }
-
 .news-desc h3{
     color: var(--main-color);
     font-weight: 600;
@@ -1309,7 +1191,6 @@ ul {
     font-size:18px;
     color:#696969;
 }
-
 .news .right{
     display: flex;
     flex-direction: column;
@@ -1365,12 +1246,10 @@ ul {
 .news .right>a:hover:before{
     animation: link-hover 0.7s ease-in-out;
     -webkit-animation: link-hover 0.7s ease-in-out;
-
 }
 .news-desc h3:hover{
     text-decoration: underline;
 }
-
 @media (max-width:1399px){
     .news-desc h3{
         font-size: 24px;
@@ -1428,7 +1307,7 @@ ul {
     border:none;
     height: 4px;
     background-color: var(--main-color);
-    margin-block:10px
+    margin-block:10px;
 }
 @media (max-width:767px){
     .separate-section{
@@ -1547,7 +1426,6 @@ footer{
 .foot-section ul ul{
     padding-left: 25px;
 }
-
 .foot-section>a,
 .stay-in-touch a{
     color:rgb(176, 176, 176);
